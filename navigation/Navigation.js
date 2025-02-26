@@ -7,6 +7,7 @@ import { Icon } from 'react-native-elements'
 import AccountStack from './AccountStack'
 import ProductsStack from './ProductsStack'
 import SearchStack from './SearchStack'
+import CartStack from './CartStack'
 
 
 
@@ -68,7 +69,7 @@ export default function Navigation(){
               />
               <Tab.Screen
                   name="Carrito"
-                  component={AccountStack}
+                  component={CartStack}
                   options={{title: "Carrito", headerShown:false}}
               />
           </Tab.Navigator>
