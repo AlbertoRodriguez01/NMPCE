@@ -6,7 +6,6 @@ import { Icon } from 'react-native-elements'
 
 import AccountStack from './AccountStack'
 import ProductsStack from './ProductsStack'
-import SearchStack from './SearchStack'
 import CartStack from './CartStack'
 
 
@@ -25,8 +24,8 @@ export default function Navigation(){
                 iconName = "cart-variant"
                 break;
             case "Buscar":
-                    iconName = "magnify"
-                    break;
+                iconName = "magnify"
+                break;
             case "Cuenta":
                 iconName = "account"
                 break;
@@ -48,8 +47,8 @@ export default function Navigation(){
               initialRouteName='Productos'
               screenOptions={({ route }) => ({
                   tabBarIcon: ({ color }) => screenOptions(route, color),
-                  inactiveTintColor: "#0B4167",
-                  activeTintColor: "#36ADFC"
+                  inactiveTintColor: "#377d07",
+                  activeTintColor: "#377d07"
               })}
           >
               <Tab.Screen
@@ -61,11 +60,6 @@ export default function Navigation(){
                   name="Cuenta"
                   component={AccountStack}
                   options={{title: "Cuenta", headerShown:false}}
-              />
-              <Tab.Screen
-                  name="Buscar"
-                  component={SearchStack}
-                  options={{title: "Buscar", headerShown:false}}
               />
               <Tab.Screen
                   name="Carrito"

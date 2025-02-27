@@ -5,7 +5,7 @@ import RegisterForm from '../../components/account/RegisterForm'
 
 export default function Register() {
     return (
-        <KeyboardAwareScrollView style={styles.form}>
+        <KeyboardAwareScrollView>
             <Image source={require("../../assets/logo.png")} resizeMode='contain' style={styles.image}/>
           <RegisterForm/>
         </KeyboardAwareScrollView>
@@ -17,8 +17,5 @@ const styles = StyleSheet.create({
         height:150,
         width:"100%",
         marginBottom:20
-    },
-    form:{
-      
     }
 })

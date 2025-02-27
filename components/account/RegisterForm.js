@@ -12,19 +12,16 @@ export default function RegisterForm() {
           <Input 
             containerStyle={styles.input}
             placeholder='Ingresa tu email...'
-            onChange={(e) => onChange(e, "email")}
             keyboardType='email-address'
           />
           <Input 
             containerStyle={styles.input}
             placeholder='Ingresa tu contraseña...'
-            onChange={(e) => onChange(e, "password")}
             password={true}
           />
           <Input 
             containerStyle={styles.input}
             placeholder='Confirma tu contraseña...'
-            onChange={(e) => onChange(e, "confirm")}
             password={true}
             
           />
@@ -50,7 +47,7 @@ const styles = StyleSheet.create({
         alignSelf: "center"
     },
     btn:{
-        backgroundColor: "#A6B9AB"
+        backgroundColor: "#377d07"
     },
     icon:{
         color:"#c1c1c1"

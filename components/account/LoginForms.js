@@ -1,28 +1,29 @@
-import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import React, { useState } from 'react'
+import { StyleSheet, View, Switch, Text } from 'react-native'
 import { Input, Button, Icon } from "react-native-elements"
 
 export default function LoginForm() {
 
+    const [isAdmin, setIsAdmin] = useState(false);
+
     return (
         <View style={styles.container}>
+            <View style={styles.switchContainer}>
+                <Text>{isAdmin ? "Admin" : "Usuario"}</Text>
+                <Switch 
+                    value={isAdmin} 
+                    onValueChange={(value) => setIsAdmin(value)}
+                />
+            </View>
             <Input 
                 containerStyle={styles.input}
                 placeholder='Ingresa tu email.'
                 keyboardType='email-address'
-                errorMessage={errorEmail}
-                defaultValue={formData.email}
             />
             <Input 
                 containerStyle={styles.input}
                 placeholder='Ingresa tu contraseña.'
                 password={true}
-                secureTextEntry={!showPassword}
-                errorMessage={errorPassword}
-                defaultValue={formData.password}
-                rightIcon={
-                    <Icon type='material-community' name={showPassword ? "eye-off-outline": "eye-outline"} iconStyle={styles.icon} onPress={() => setShowPassword(!showPassword)}/>
-                }
             />
             <Button
             title="Iniciar Sesion"
@@ -49,7 +50,7 @@ const styles = StyleSheet.create({
         alignSelf: "center"
     },
     btn:{
-        backgroundColor: "#36ADFC"
+        backgroundColor: "#377d07"
     },
     icon:{
         color:"#c1c1c1"

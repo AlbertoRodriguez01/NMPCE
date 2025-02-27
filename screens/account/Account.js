@@ -17,17 +17,17 @@ export default function Account() {
                   >
                     <Image source={require("../../assets/logo.png")} resizeMode='contain' style={styles.image}/>
                     <Text style={styles.title}>Consulta tu perfil</Text>
-                    <Text style={styles.descripcion}>Ven y consigue dinero por tus productos!!</Text>
+                    <Text style={styles.descripcion}>Ven y consigue dinero por tus productos!</Text>
                     <Button
                         buttonStyle={styles.boton}
                         title="Iniciar Sesion"
                         onPress={() => navigation.navigate("Login")}
                     />
                     <Button
-                                    buttonStyle={styles.boton}
-                                    title="Registrarse"
-                                    onPress={() => navigation.navigate("Register")}
-                                />
+                        buttonStyle={styles.boton}
+                        title="Registrarse"
+                        onPress={() => navigation.navigate("Register")}
+                    />
       </ScrollView>
     )
 }
@@ -53,6 +53,7 @@ const styles = StyleSheet.create({
       color:"gray"
   },
   boton:{
-      backgroundColor:"#36ADFC"
+      backgroundColor:"#377d07",
+      margin: 15
   }
 })
