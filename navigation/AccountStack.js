@@ -4,12 +4,31 @@ import Account from '../screens/account/Account'
 import Login from '../screens/account/Login'
 import Register from '../screens/account/Register'
 
+import { Icon } from 'react-native-elements'
+import { DrawerActions, useNavigation } from '@react-navigation/native'
+
 
 const Stack = createStackNavigator()
 
 export default function AccountStack() {
+
+  const navigation = useNavigation()
+
   return(
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerLeft: () => {
+          return(
+            <Icon
+              name='menu'
+              size={30}
+              color='#000'
+              onPress={() => navigation.dispatch(DrawerActions.openDrawer())}
+            />
+          )
+        }
+      }}
+    >
         <Stack.Screen
             name="Account"
             component={Account}
