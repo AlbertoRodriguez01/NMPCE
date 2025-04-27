@@ -35,15 +35,37 @@ export default function AccountStack() {
             options={{title: "Cuenta"}}
         />
         <Stack.Screen
-            name="Login"
-            component={Login}
-            options={{title: "Iniciar Sesion"}}
-        />
-        <Stack.Screen
-            name="Register"
-            component={Register}
-            options={{title: "Registrar Usuario"}}
-        />
+        name="Login"
+        component={Login}
+        options={({ navigation }) => ({
+          title: "Iniciar Sesion",
+          headerLeft: () => (
+            <Icon
+              type="material-community"
+              name="arrow-left-circle"
+              size={30}
+              color="#000"
+              onPress={() => navigation.goBack()}
+            />
+          ),
+        })}
+      />
+      <Stack.Screen
+        name="Register"
+        component={Register}
+        options={({ navigation }) => ({
+          title: "Registrarse",
+          headerLeft: () => (
+            <Icon
+              type="material-community"
+              name="arrow-left-circle"
+              size={30}
+              color="#000"
+              onPress={() => navigation.goBack()}
+            />
+          ),
+        })}
+      />
     </Stack.Navigator>
   )
 }

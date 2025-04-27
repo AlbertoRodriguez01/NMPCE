@@ -16,6 +16,10 @@ export default function RegisterForm() {
           />
           <Input 
             containerStyle={styles.input}
+            placeholder='Nombre...'
+          />
+          <Input 
+            containerStyle={styles.input}
             placeholder='Ingresa tu contraseña...'
             password={true}
           />
