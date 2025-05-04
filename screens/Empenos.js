@@ -1,12 +1,10 @@
 import React from 'react'
 import { StyleSheet, ScrollView, Image, Text} from 'react-native'
 
-import UserGuest from './UserGuest'
-import UserLogged from './UserLogged'
 import { Button } from 'react-native-elements'
 import { useNavigation } from '@react-navigation/native'
 
-export default function Account() {
+export default function Empenos() {
 
   const navigation = useNavigation()
 
@@ -15,18 +13,18 @@ export default function Account() {
                     centerContent
                     style={styles.viewBody}
                   >
-                    <Image source={require("../../assets/logo.png")} resizeMode='contain' style={styles.image}/>
-                    <Text style={styles.title}>Consulta tu perfil</Text>
-                    <Text style={styles.descripcion}>Ven y consigue dinero por tus productos!</Text>
+                    <Image source={require("../assets/logo.png")} resizeMode='contain' style={styles.image}/>
+                    <Text style={styles.title}>Bienvenido a Empeños!!</Text>
+                    <Text style={styles.descripcion}>¿Qué deseas hacer?</Text>
                     <Button
                         buttonStyle={styles.boton}
-                        title="Iniciar Sesion"
-                        onPress={() => navigation.navigate("Login")}
+                        title="Empeñar un articulo"
+                        onPress={() => navigation.navigate("Empeno")}
                     />
                     <Button
                         buttonStyle={styles.boton}
-                        title="Registrarse"
-                        onPress={() => navigation.navigate("Register")}
+                        title="Historial de empeños"
+                        onPress={() => navigation.navigate("EmpenoList")}
                     />
       </ScrollView>
     )

@@ -38,7 +38,7 @@ export default function ProductsStack() {
           headerLeft: () => (
             <Icon
               type="material-community"
-              name="arrow-left-circle"
+              name="arrow-left-drop-circle-outline"
               size={30}
               color="#000"
               onPress={() => navigation.goBack()}
