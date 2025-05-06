@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, FlatList, Image, StyleSheet } from "react-native";
 import { Button } from "react-native-elements";
+import { useNavigation } from "@react-navigation/native";
 
 const cartData = [
   { id: "1", name: "Anillo Pandora", price: 1200, quantity: 1, image: "https://pandoramx.vtexassets.com/arquivos/ids/465502/198289CZ_1.png?v=638482333441330000" },
@@ -11,7 +12,8 @@ const cartData = [
 const CartScreen = () => {
   const [cart, setCart] = useState(cartData);
 
-  // Calcular total
+  const navigation = useNavigation()
+
   const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
@@ -38,7 +40,7 @@ const CartScreen = () => {
         title="Realizar compra"
         containerStyle={styles.btnContainer}
         buttonStyle={styles.btn}
-        onPress={() => alert("Compra realizada")}
+        onPress={() => navigation.navigate("PayCart")}
       />
     </View>
   );

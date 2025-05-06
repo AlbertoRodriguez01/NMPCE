@@ -1,9 +1,10 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
-import Cart from '../screens/Cart'
+import Cart from '../screens/cart/Cart'
 
 import { Icon } from 'react-native-elements'
 import { DrawerActions, useNavigation } from '@react-navigation/native'
+import PayCart from '../screens/cart/PayCart'
 
 
 const Stack = createStackNavigator()
@@ -32,7 +33,22 @@ export default function AccountStack() {
             component={Cart}
             options={{title: "Carrito"}}
         />
-        
+        <Stack.Screen
+            name="PayCart"
+            component={PayCart}
+            options={({ navigation }) => ({
+              title: "Pago del Carrito",
+                headerLeft: () => (
+                  <Icon
+                    type="material-community"
+                    name="arrow-left-drop-circle-outline"
+                    size={30}
+                    color="#000"
+                    onPress={() => navigation.goBack()}
+                  />
+                ),
+              })}
+        />
     </Stack.Navigator>
   )
 }

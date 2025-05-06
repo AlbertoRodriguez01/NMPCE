@@ -13,7 +13,7 @@ export default function Empenos() {
                     centerContent
                     style={styles.viewBody}
                   >
-                    <Image source={require("../assets/logo.png")} resizeMode='contain' style={styles.image}/>
+                    <Image source={require("../../assets/logo.png")} resizeMode='contain' style={styles.image}/>
                     <Text style={styles.title}>Bienvenido a Empeños!!</Text>
                     <Text style={styles.descripcion}>¿Qué deseas hacer?</Text>
                     <Button

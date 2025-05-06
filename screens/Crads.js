@@ -70,7 +70,7 @@ export default function CardsScreen() {
           value={cardNum} 
           onChangeText={setCardNum} 
           keyboardType="numeric" 
-          maxLength={16} // Limita el número de caracteres a 16
+          maxLength={16}
         />
         <Input placeholder='CVV' value={cvv} onChangeText={setCvv} keyboardType="numeric" maxLength={3} />
       </View>

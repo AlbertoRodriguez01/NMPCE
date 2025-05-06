@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { StyleSheet, View, TouchableOpacity, Image, ScrollView, Alert } from 'react-native'
 import { Input, Icon, Button } from 'react-native-elements'
 import * as ImagePicker from 'expo-image-picker'
-import Loading from '../components/Loading'
+import Loading from '../../components/Loading'
 
 export default function EmpenoScreen() {
   
