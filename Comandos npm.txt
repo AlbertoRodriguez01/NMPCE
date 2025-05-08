@@ -1,0 +1,37 @@
+//CREAR PROYECTO
+npm install -g expo-cli
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+expo init NOMBREPROYECTO
+
+//INSTALAR NAVEGACION
+npm install @react-navigation/native
+
+npx expo install react-native-screens react-native-safe-area-context
+
+npm add @react-navigation/bottom-tabs
+
+npm add @react-navigation/drawer --force
+
+npx expo install @react-navigation/drawer react-native-gesture-handler --force react-native-reanimated
+
+npm add @react-navigation/stack
+
+
+//ICONOS
+ npm install react-native-elements
+
+npm install react-native-keyboard-aware-scroll-view
+
+
+//IMAGE PICKER
+npx expo install expo-image-picker
+
+//Animaciones
+npm install react-native-animatable
+
+npm install react-native-picker-select
+
+//Firebase
+npm install firebase
+npm install @react-native-async-storage/async-storage
+npx pod-install ios
